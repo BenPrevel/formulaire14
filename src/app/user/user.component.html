@@ -1,0 +1,29 @@
+<form>
+  <label>Username:</label><br />
+  <input type="text" [formControl]="username" /><br />
+
+  <label>Email :</label><br />
+  <input type="email" [formControl]="email" /><br />
+
+  <label> Password :</label><br />
+  <input type="password" [formControl]="password" /><br />
+  <label>
+    Adresse :<br />
+    <input type="text" [formControl]="number" placeholder="number" /><br />
+    <input type="text" [formControl]="street" placeholder="street" /><br />
+    <input tupe="text" [formControl]="zipCode" placeholder="zip code" /><br />
+    <input type="text" [formControl]="city" placeholder="city" /><br />
+  </label>
+  <br />
+  <button type="submit" (click)="userSubmit()">Inscription</button>
+</form>
+
+<p>{{ newUser.userName }}</p>
+<p>{{ newUser.email }}</p>
+<p>{{ newUser.password }}</p>
+<p>
+  {{ newUser.number }}
+  {{ newUser.street }}
+  {{ newUser.zipCode }}
+  {{ newUser.city }}
+</p>
